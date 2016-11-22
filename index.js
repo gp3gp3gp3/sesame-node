@@ -5,15 +5,15 @@ var path = require('path')
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'))
+  res.sendFile(path.join(__dirname, '/index.html'))
 })
 
 app.get('/audio', function (req, res) {
-  res.sendFile(path.join(__dirname + '/audio.html'))
+  res.sendFile(path.join(__dirname, '/audio.html'))
 })
 
 app.get('/iframe', function (req, res) {
-  res.sendFile(path.join(__dirname + '/iframe.html'))
+  res.sendFile(path.join(__dirname, '/iframe.html'))
 })
 
 var server = app.listen(process.env.PORT || 3000, function () {
