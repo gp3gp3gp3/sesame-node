@@ -1,1 +1,1 @@
-# sesame-node
+# Node server for coding challenge
