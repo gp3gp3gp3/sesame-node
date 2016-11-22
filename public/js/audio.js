@@ -46,8 +46,6 @@ const onSuccess = stream => {
   }
 }
 
-const onError = err => {
-  console.error('Audio error', err)
-}
+const onError = err => console.error('Audio error', err)
 
 navigator.getUserMedia({ audio: true }, onSuccess, onError)
