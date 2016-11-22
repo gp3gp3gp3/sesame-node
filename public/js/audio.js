@@ -23,17 +23,17 @@ if (navigator.getUserMedia) {
     }
 
     mediaRecorder.onstop = function (e) {
-      var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' })
+      var blob = new Blob(chunks, { 'type': 'audio/ogg; codecs=opus' })
       var blobUrl = URL.createObjectURL(blob)
       var audio = new Audio(blobUrl)
 
       audio.ontimeupdate = function () {
         console.log('inside on duration change, audio.currentTime', audio.currentTime)
-        document.getElementById('trackTime').innerHTML = Math.floor(audio.currentTime) + " / " + recordingSeconds
+        document.getElementById('trackTime').innerHTML = Math.floor(audio.currentTime) + ' / ' + recordingSeconds
       }
 
       audio.onended = function () {
-        document.getElementById('trackTime').innerHTML = recordingSeconds + " / " + recordingSeconds
+        document.getElementById('trackTime').innerHTML = recordingSeconds + ' / ' + recordingSeconds
         record.disabled = false
       }
 
