@@ -13,12 +13,13 @@ const onSuccess = stream => {
     const audio = new Audio(blobUrl)
 
     audio.ontimeupdate = () => {
-      document.getElementById('trackTime').innerHTML = `${Math.floor(audio.currentTime)} / ${recordingSeconds}`
+      document.getElementById('trackTime').innerHTML = `${Math.floor(audio.currentTime)} / ${recordingSeconds} seconds`
     }
 
     audio.onended = () => {
-      document.getElementById('trackTime').innerHTML = `${recordingSeconds} / ${recordingSeconds}`
+      document.getElementById('trackTime').innerHTML = `${recordingSeconds} / ${recordingSeconds} seconds`
       record.disabled = false
+      record.innerHTML = 'Record'
     }
 
     audio.play()
@@ -28,6 +29,7 @@ const onSuccess = stream => {
   record.addEventListener('click', () => {
     mediaRecorder.start()
     record.disabled = true
+    record.innerHTML = 'Recording...'
     /*
       This is not ideal, but passing a timeslice to mediaRecorder.start(5000)
       makes for strange behavior.  The dataavailable event keeps firing off every allotted amount
@@ -40,7 +42,7 @@ const onSuccess = stream => {
 
   const endRecording = () => {
     mediaRecorder.stop()
-    console.log('recording stopped')
+    record.innerHTML = 'Playing...'
   }
 }
 
