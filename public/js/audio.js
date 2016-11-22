@@ -43,7 +43,6 @@ const onSuccess = stream => {
   const endRecording = () => {
     mediaRecorder.stop()
     record.innerHTML = 'Playing...'
-    console.log('recording stopped')
   }
 }
 
