@@ -1,0 +1,26 @@
+{
+  "name": "sesame-node",
+  "version": "1.0.0",
+  "description": "Node server for coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gp3gp3gp3/sesame-node.git"
+  },
+  "author": "George Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gp3gp3gp3/sesame-node/issues"
+  },
+  "homepage": "https://github.com/gp3gp3gp3/sesame-node#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
