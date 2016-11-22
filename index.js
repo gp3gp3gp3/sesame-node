@@ -1,8 +1,17 @@
 var express = require('express')
 var app = express()
+var path = require('path')
 
 app.get('/', function (req, res) {
-  res.send('Hello world')
+  res.sendFile(path.join(__dirname + '/index.html'))
+})
+
+app.get('/audio', function (req, res) {
+  res.sendFile(path.join(__dirname + '/audio.html'))
+})
+
+app.get('/iframe', function (req, res) {
+  res.sendFile(path.join(__dirname + '/iframe.html'))
 })
 
 var server = app.listen(process.env.PORT || 3000, function () {
