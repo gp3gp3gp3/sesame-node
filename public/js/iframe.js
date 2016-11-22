@@ -1,5 +1,5 @@
 const loadNode = () => {
-  return new Promise ((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     frames[0].onload = e => resolve(e)
     frames[0].onerror = e => reject(e)
   })
