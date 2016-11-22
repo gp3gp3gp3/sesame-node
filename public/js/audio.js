@@ -1,4 +1,4 @@
-const recordingSeconds = 5
+const recordingSeconds = 30
 const record = document.querySelector('.record')
 let chunks = []
 
