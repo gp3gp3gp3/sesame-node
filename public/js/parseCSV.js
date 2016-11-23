@@ -16,12 +16,13 @@ const drawCSV = user => {
 }
 
 $.get('files/attachment2.csv', data => {
-  const csvData = Papa.parse(data, {
+  Papa.parse(data, {
     worker: true,
     header: true,
+    skipEmptyLines: true,
     complete: () => {
-      $('#loading').remove()
       $('#accordion').accordion({collapsible: true})
+      $('#loading').remove()
     },
     step: row => $('#accordion').append(drawCSV(row.data[0]))
   })
