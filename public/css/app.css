@@ -23,6 +23,10 @@ a {
   color: deepskyblue;
 }
 
+.ui-widget-content a {
+  color: deepskyblue;
+}
+
 .content {
   margin: 0 auto;
   padding-top: 64px;
@@ -43,4 +47,8 @@ a {
   padding: 1rem;
   background: #efefef;
   text-align: center;
+}
+
+#accordion {
+  text-align: initial;
 }

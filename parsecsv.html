@@ -2,18 +2,23 @@
 <html>
 <head>
   <title>Parse CSV</title>
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body>
   <div class='content'>
     <h2>Parse CSV</h2>
+    <i id='loading' class='fa fa-spinner fa-pulse fa-5x fa-fw'></i>
+    <div id='accordion'>
+    </div>
   </div>
   <div class='footer'>
     <p>Currently on csv page</p>
     <p><a href='/'>Home</a> | <a href='https://github.com/gp3gp3gp3/sesame-node'>Source</a></p>
     <p>Made by <a href="https://gp3gp3gp3.github.io">George Paul</a></p>
     <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+    <script type="text/javascript" src='js/jquery-ui.min.js'></script>
     <script type="text/javascript" src='js/papaparse.min.js'></script>
     <script type="text/javascript" src='js/parseCSV.js'></script>
   </div>
