@@ -1,3 +1,6 @@
+
+/* Elements ------------------------------------------------ */
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -23,6 +26,12 @@ a {
   color: deepskyblue;
 }
 
+/* Classes ------------------------------------------------- */
+
+.ui-widget-content a {
+  color: deepskyblue;
+}
+
 .content {
   margin: 0 auto;
   padding-top: 64px;
@@ -43,4 +52,15 @@ a {
   padding: 1rem;
   background: #efefef;
   text-align: center;
+}
+
+/* IDs ----------------------------------------------------- */
+
+#accordion {
+  text-align: initial;
+  margin-bottom: 100px;
+}
+
+#loading {
+  color: deepskyblue;
 }
